@@ -1,0 +1,14 @@
+!postrefact::post::meta ----------
+ID: {{ post['ID'] }}
+post_type: {{ post['post_type'] }}
+post_date: "{{ post['post_date'] }}"
+post_title: "{{ post['post_title']|e }}"
+post_name: {{ post['post_name'] }}
+guid: {{ post['guid'] }}
+category: "{{ post['category']|join(',')|raw }}"
+post_tag: ["{{ post['post_tag']|join('","')|raw }}"]
+portfolios: ["{{ post['portfolios']|join('","')|raw }}"]
+blogs: "{{ post['blogs']|join(',')|raw }}"
+!postrefact::post::content ----------
+{{ post['post_content']|raw }}
+!postrefact::post::expect ----------

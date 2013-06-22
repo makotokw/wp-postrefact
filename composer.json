@@ -1,0 +1,13 @@
+{
+    "require": {
+        "php": ">=5.3",
+        "symfony/filesystem": "2.1.*@dev",
+        "symfony/yaml": "2.1.*@dev",
+        "twig/twig": "1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}

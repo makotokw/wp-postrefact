@@ -1,0 +1,12 @@
+layout: {{ post['post_type'] }}
+title: "{{ post['post_title'] }}"
+{% if post['category'] is not empty %}
+category: "{{ post['category']|join(',')|raw }}"
+{% endif %}
+{% if post['post_tag'] is not empty %}
+tag: ["{{ post['post_tag']|join('","')|raw }}"]
+{% endif %}
+date: {{ post['post_date']|date('Y-m-d') }}
+---
+{{ post['post_content']|raw }}
+{{ post['post_expect']|raw }}
